@@ -1,0 +1,13 @@
+ {% load static %}
+ <h3 class="subtitle">دسته ها</h3>
+          <div class="box-category">
+            <ul id="cat_accordion">
+              {% for category in categories %}
+              <li class="cutom-parent-li"><a href="{% url 'products:product_list_category' category_name=category.name %}" class="cutom-parent">{{category.title}}<span class="dcjq-icon"></span></a> <span class="down"></span>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="banner owl-carousel owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 1052px; left: 0px; display: block; transition: all; transform: translate3d(-263px, 0px, 0px); transform-origin: 394.5px center 0px; perspective-origin: 394.5px center;"><div class="owl-item" style="width: 263px;"><div class="item"> <a href="#"><img src="image/banner/small-banner1-265x350.jpg" alt="" class="img-responsive"></a> </div></div><div class="owl-item" style="width: 263px;"><div class="item"> <a href="#"><img src="{% static 'image/banner/small-banner-265x350.jpg' %}" alt="small banner1" class="img-responsive"></a> </div>
+            </div></div></div>
+          </div>

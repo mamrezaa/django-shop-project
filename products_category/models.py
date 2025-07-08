@@ -1,0 +1,14 @@
+from django.db import models
+
+# Create your models here.
+class Category(models.Model):
+    title = models.CharField(max_length=100,null=True, blank=True, verbose_name='نام دسته بندی')
+    name = models.CharField(max_length=100,null=True, blank=True, verbose_name='انتخاب url')
+    
+
+    class Meta():
+        verbose_name = 'دسته بندی'
+        verbose_name_plural = 'دسته بندی ها '
+
+    def __str__(self):
+        return self.title

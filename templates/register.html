@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="row">
+        <!--Middle Part Start-->
+        <div class="col-sm-9" id="content">
+          <h1 class="title">ثبت نام حساب کاربری</h1>
+          <p>اگر قبلا حساب کاربریتان را ایجاد کرد اید جهت ورود به <a href="login.html">صفحه لاگین</a> مراجعه کنید.</p>
+          <form class="form-horizontal" action="" method="post">
+            {% csrf_token %}
+            {{register_form}}
+
+            <input   type="submit" value="ثبت نام" class="btn btn-success">
+          </form>
+        </div>
+        <!--Middle Part End -->
+        <!--Right Part Start -->
+        
+        <!--Right Part End -->
+      </div>
+
+{% endblock %}

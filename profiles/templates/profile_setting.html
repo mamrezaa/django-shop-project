@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load render_partial %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <aside id="column-left" class="col-sm-3 hidden-xs">
+            {% include 'profile_sidebar.html' %}
+        </aside>
+
+        <div id="content" class="col-sm-9">
+            <h1 class="title">ویرایش پروفایل</h1>
+            <form class="form-horizontal" method="post">
+            
+            <fieldset>             
+              {% csrf_token %}
+              {{edit_form}}
+            </fieldset>
+            <div class="buttons">
+              <div class="pull-right">
+                <input class="btn btn-primary" type="submit" value="ارسال">
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
